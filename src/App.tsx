@@ -61,6 +61,12 @@ function App() {
 					))
 				}
 			</section>
+
+			<footer>
+				Feito com <span role="img" aria-label="Emoji de coração">❤</span> por Caroline Ribeiro. <br />
+				Direitos de imagem para Netflix. <br />
+				Dados pegos do site Themoviedb.org.
+			</footer>
 		</div>
 	);
 }
