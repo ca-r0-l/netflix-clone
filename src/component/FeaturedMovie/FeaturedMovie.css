@@ -42,10 +42,6 @@
     color: #46d369;
 }
 
-.featured--overview {
-
-}
-
 .featured--description {
     margin-top: 15px;
     font-size: 20px;
@@ -88,4 +84,33 @@
     margin-top: 15px;
     font-size: 18px;
     color: #999;
+}
+
+@media(max-width: 760px) {
+    .featured {
+        height: 90vh;
+    }
+
+    .featured--name {
+        font-size: 40px;
+    }
+
+    .featured--info {
+        font-size: 16px;
+    }
+
+    .featured--description {
+        font-size: 14px;
+        max-width: 100%;
+        margin-right: 30px;
+    }
+
+    .featured--buttons--watch,
+    .featured--buttons--add {
+        font-size: 16px;
+    }
+
+    .featured--genres {
+        font-size: 14px;
+    }
 }

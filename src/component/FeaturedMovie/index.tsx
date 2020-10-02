@@ -6,6 +6,12 @@ interface Props {
 }
 
 function FeaturedMovie(props: Props) {   
+    let description = props.movie.overview ? props.movie.overview : "";
+
+    if (description.length > 200) {
+        description = description.substring(0, 200) + "...";
+    }
+
     return (
         <section className="featured" style={{
             backgroundSize: 'cover',
@@ -20,7 +26,7 @@ function FeaturedMovie(props: Props) {
                         { props.movie.first_air_date ? <div className="featured--year">{new Date(props.movie.first_air_date).getFullYear()}</div> : null}
                         { props.movie.number_of_seasons ? <div className="featured--seasons">{props.movie.number_of_seasons} temporada{props.movie.number_of_seasons !== 1 ? "s": ""}</div> : null}
                     </div>
-                    { props.movie.overview ? <div className="featured--description">{props.movie.overview}</div> : null}
+                    <div className="featured--description">{description}</div>
                     {
                         props.movie.original_name ?
                             <div className="featured--buttons">

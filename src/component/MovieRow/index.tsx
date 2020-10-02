@@ -9,7 +9,7 @@ interface Props {
 }
 
 function MovieRow(props: Props) {
-    const [scrollX, setScrollX] = useState(-400);
+    const [scrollX, setScrollX] = useState(0);
 
     const handleLeftArrow = () => {
         let x = scrollX + Math.round(window.innerWidth / 2);
